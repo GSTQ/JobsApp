@@ -32,7 +32,7 @@ namespace JobsApp.Services.Impl
             var request = new HttpRequestMessage();
             request.Method = HttpMethod.Get;
             request.Headers.Add("User-Agent", HeadHunterUserAgent); // без него hh.ru реджектит
-            request.RequestUri = new System.Uri($"{_seviceConfig.ApiUrl}/vacancies?area={_seviceConfig.AreaId}&per_page=50");
+            request.RequestUri = new System.Uri($"{_seviceConfig.ApiUrl}/vacancies?area={_seviceConfig.AreaId}&per_page={_seviceConfig.PerPage}");
             var data = await _httpClient.SendAsync(request);
 
             if (!data.IsSuccessStatusCode)

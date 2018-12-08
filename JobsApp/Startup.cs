@@ -30,8 +30,10 @@ namespace JobsApp
             services.AddSingleton(_ => new HeadHunterServiceConfig()
             {
                 ApiUrl = Configuration.GetValue<string>("HeadHunterApiUrl"),
-                AreaId = Configuration.GetValue<string>("HeadHunterAreaId")
+                AreaId = Configuration.GetValue<string>("HeadHunterAreaId"),
+                PerPage = Configuration.GetValue<int>("HeadHunterPerPage"),
             });
+
             var databaseSettings = new DatabaseServiceConfig()
             {
                 ConnectionString = Configuration.GetValue<string>("PotsgresConnectionString")
