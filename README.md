@@ -2,9 +2,9 @@ JobsApp
 =======
 
 Запуск: 
-    * Перейти в директорию docker
-    * Собрать контейнеры: docker-compose build
-    * Запустить: docker-compose up -d
+   * Перейти в директорию docker
+   * Собрать контейнеры: docker-compose build
+   * Запустить: docker-compose up -d
 
 Приложение доступно на порту 5000. 
 Поддерживает отображения списка вакансий: api/vacancies
